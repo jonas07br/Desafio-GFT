@@ -1,3 +1,27 @@
+function setRank(herovictorys){
+    if(herovictorys<=10){
+        return heroRank = 'Ferro';
+    }
+    else if(herovictorys>10 && herovictorys<=20){
+        return heroRank = 'Bronze';
+    }
+    else if(herovictorys>20 && herovictorys<=50){
+        return heroRank = 'Prata';
+    }
+    else if(herovictorys>50 && herovictorys<=80){
+        return heroRank = 'Ouro';
+    }
+    else if(herovictorys>80 && herovictorys<=90){
+        return heroRank = 'Diamante';
+    }
+    else if(herovictorys>90 && herovictorys<=100){  
+        return heroRank = 'Lendário';
+    }
+    else{
+        return heroRank = 'Imortal';
+    }
+
+}
 let hero1 ={
     name: 'Spider-Man',
     victorys: 9
@@ -32,28 +56,8 @@ for(let i = 0; i < input.length; i++){
     let herovictorys = input[i].victorys;
     let heroRank = '';
     
-    if(herovictorys<=10){
-        heroRank = 'Ferro';
-    }
-    else if(herovictorys>10 && herovictorys<=20){
-        heroRank = 'Bronze';
-    }
-    else if(herovictorys>20 && herovictorys<=50){
-        heroRank = 'Prata';
-    }
-    else if(herovictorys>50 && herovictorys<=80){
-        heroRank = 'Ouro';
-    }
-    else if(herovictorys>80 && herovictorys<=90){
-        heroRank = 'Diamante';
-    }
-    else if(herovictorys>90 && herovictorys<=100){  
-        heroRank = 'Lendário';
-    }
-    else{
-        heroRank = 'Imortal';
-    }
     
-    console.log(`o heroi ${heroName} tem salde de ${herovictorys} e esta no nivel ${heroRank}`);
+    
+    console.log(`o heroi ${heroName} tem salde de ${herovictorys} e esta no nivel ${setRank(herovictorys)}`);
     console.log('--------------------------------------');
 }
